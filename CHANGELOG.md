@@ -20,6 +20,8 @@ Changelog since 1.3.3:
  - [extra/krakencurve-poc] Refresh syntax and sensor names; get CPU temperature on macOS with iStats
  - Use hidapi for HIDs on Windows
  - Improve the documentation
+ - Promote Corsair HXi and RMi PSUs to no longer experimental
+ - Promote NZXT Smart Device V2 and HUE 2 controllers to no longer experimental
 ### Fixed
  - [HUE 2] Add missing identifiers for some HUE2 accessories (#95; #109)
  - [NZXT E500/E650/E850] Fix CAM-like decoding of firmware version (#46, comment)

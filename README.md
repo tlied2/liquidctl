@@ -76,26 +76,25 @@ NZXT Kraken X (X42, X52, X62 or X72)
 | NZXT Kraken X40, X60 | [documentation](docs/asetek-690lc.md) | <sup>_E, L, Z_</sup> |
 | NZXT Kraken X31, X41, X61 | [documentation](docs/asetek-690lc.md) | <sup>_E, L, Z_</sup> |
 | NZXT Kraken X42, X52, X62, X72 | [documentation](docs/third-generation-krakens.md) | |
-| NZXT Kraken X53, X63, X73 | [documentation](docs/fourth-generation-krakens.md) | <sup>_E, U_</sup> |
-| NZXT Kraken Z63, Z73 | [documentation](docs/fourth-generation-krakens.md) | <sup>_E, U_</sup> |
+| NZXT Kraken X53, X63, X73 | [documentation](docs/fourth-generation-krakens.md) | <sup>_E_</sup> |
+| NZXT Kraken Z63, Z73 | [documentation](docs/fourth-generation-krakens.md) | <sup>_E_</sup> |
 
 ### Other parts
 
 | Family | Documentation | Notes |
 | --- | --- | --- |
-| Corsair HX750i, HX850i, HX1000i, HX1200i | [documentation](docs/corsair-hxi-rmi.md) | <sup>_E_</sup> |
-| Corsair RM650i, RM750i, RM850i, RM1000i | [documentation](docs/corsair-hxi-rmi.md) | <sup>_E_</sup> |
+| Corsair HX750i, HX850i, HX1000i, HX1200i | [documentation](docs/corsair-hxi-rmi.md) | |
+| Corsair RM650i, RM750i, RM850i, RM1000i | [documentation](docs/corsair-hxi-rmi.md) | |
 | NZXT E500, E650, E850 | [documentation](docs/seasonic-e-series.md) | <sup>_E_</sup> |
 | NZXT Grid+ V3 | [documentation](docs/nzxt-smart-device.md) | |
-| NZXT HUE 2, HUE 2 Ambient | [documentation](docs/nzxt-smart-device-v2.md) | <sup>_E_</sup> |
+| NZXT HUE 2, HUE 2 Ambient | [documentation](docs/nzxt-smart-device-v2.md) | |
 | NZXT Smart Device | [documentation](docs/nzxt-smart-device.md) | |
-| NZXT Smart Device V2 | [documentation](docs/nzxt-smart-device-v2.md) | <sup>_E_</sup> |
-| NZXT RGB & Fan Controller | [documentation](docs/nzxt-smart-device-v2.md) | <sup>_E, U_</sup> |
+| NZXT Smart Device V2 | [documentation](docs/nzxt-smart-device-v2.md) | |
+| NZXT RGB & Fan Controller | [documentation](docs/nzxt-smart-device-v2.md) | <sup>_E_</sup> |
 
 <sup>_E_</sup> _Experimental._  
 <sup>_L_</sup> _Requires the `--legacy-690lc` flag._  
 <sup>_Z_</sup> _Requires replacing the device driver [on Windows](#installing-on-windows)._  
-<sup>_U_</sup> _Starting with upcoming liquidctl 1.4.0._  
 
 
 ## Installing on Linux
