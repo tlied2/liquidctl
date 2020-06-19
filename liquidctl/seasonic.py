@@ -22,9 +22,9 @@ SPDX-License-Identifier: GPL-3.0-or-later
 import logging
 import time
 
-from liquidctl.driver.usb import UsbHidDriver
-from liquidctl.pmbus import CommandCode as CMD
-from liquidctl.pmbus import linear_to_float
+from .driver_tree import UsbHidDriver
+from .pmbus import CommandCode as CMD
+from .pmbus import linear_to_float
 
 LOGGER = logging.getLogger(__name__)
 
@@ -37,7 +37,7 @@ _SEASONIC_READ_FIRMWARE_VERSION = CMD.MFR_SPECIFIC_FC
 _RAILS = ['+12V peripherals', '+12V EPS/ATX12V', '+12V motherboard/PCI-e', '+5V combined', '+3.3V combined']
 
 
-class SeasonicEDriver(UsbHidDriver):
+class SeasonicE(UsbHidDriver):
     """liquidctl driver for Seasonic E-series PSUs."""
 
     SUPPORTED_DEVICES = [
@@ -141,3 +141,7 @@ class SeasonicEDriver(UsbHidDriver):
         human_ver = f'{bytes([major]).decode()}{minor:03}'
         ascam_ver = int.from_bytes(bytes.fromhex(human_ver), byteorder='big')
         return (human_ver, ascam_ver)
+
+
+# deprecated alias
+SeasonicEDriver = SeasonicE

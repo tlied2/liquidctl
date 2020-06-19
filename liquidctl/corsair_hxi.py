@@ -31,10 +31,10 @@ import logging
 from datetime import timedelta
 from enum import Enum
 
-from liquidctl.driver.usb import UsbHidDriver
-from liquidctl.pmbus import CommandCode as CMD
-from liquidctl.pmbus import WriteBit, linear_to_float
-from liquidctl.util import clamp
+from .driver_tree import UsbHidDriver
+from .pmbus import CommandCode as CMD
+from .pmbus import WriteBit, linear_to_float
+from .util import clamp
 
 LOGGER = logging.getLogger(__name__)
 
@@ -73,7 +73,7 @@ class FanControlMode(Enum):
         return self.name.capitalize()
 
 
-class CorsairHidPsuDriver(UsbHidDriver):
+class CorsairHxi(UsbHidDriver):
     """liquidctl driver for Corsair HID PSUs."""
 
     SUPPORTED_DEVICES = [
@@ -183,3 +183,7 @@ class CorsairHidPsuDriver(UsbHidDriver):
         """Get timedelta with `command`."""
         secs = int.from_bytes(self._exec(WriteBit.READ, command)[2:], byteorder='little')
         return timedelta(seconds=secs)
+
+
+# deprecated aliases
+CorsairHidPsuDriver = CorsairHxi

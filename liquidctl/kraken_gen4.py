@@ -29,9 +29,9 @@ SPDX-License-Identifier: GPL-3.0-or-later
 import logging
 import itertools
 
-from liquidctl.driver.usb import UsbHidDriver
-from liquidctl.util import normalize_profile, interpolate_profile, clamp, \
-                           Hue2Accessory, HUE2_MAX_ACCESSORIES_IN_CHANNEL
+from .driver_tree import UsbHidDriver
+from .util import normalize_profile, interpolate_profile, clamp, \
+                  Hue2Accessory, HUE2_MAX_ACCESSORIES_IN_CHANNEL
 
 LOGGER = logging.getLogger(__name__)
 
@@ -150,7 +150,7 @@ _ANIMATION_SPEEDS = {
 }
 
 
-class KrakenX3Driver(UsbHidDriver):
+class KrakenX3(UsbHidDriver):
     """liquidctl driver for model X fourth-generation coolers from NZXT."""
 
     SUPPORTED_DEVICES = [
@@ -343,7 +343,7 @@ class KrakenX3Driver(UsbHidDriver):
             self._write(header + color + footer)
 
 
-class KrakenZ3Driver(KrakenX3Driver):
+class KrakenZ3(KrakenX3):
     """liquidctl driver for model Z fourth-generation coolers from NZXT."""
 
     SUPPORTED_DEVICES = [

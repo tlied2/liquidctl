@@ -74,7 +74,7 @@ import sys
 
 from docopt import docopt
 
-from liquidctl.driver import *
+from . import find_liquidctl_devices
 from liquidctl.util import color_from_str
 from liquidctl.version import __version__
 
@@ -108,7 +108,7 @@ _PARSE_ARG = {
     '--debug': bool,
 }
 
-# options that cause liquidctl.driver.find_liquidctl_devices to ommit devices
+# options that cause find_liquidctl_devices to ommit devices
 _FILTER_OPTIONS = [
     'vendor',
     'product',
@@ -318,7 +318,7 @@ def main():
 
 def find_all_supported_devices(**opts):
     """Deprecated."""
-    LOGGER.warning('deprecated: use liquidctl.driver.find_liquidctl_devices instead')
+    LOGGER.warning('deprecated: use liquidctl.find_liquidctl_devices instead')
     return find_liquidctl_devices(**opts)
 
 
